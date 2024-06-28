@@ -1,0 +1,176 @@
+
+@font-face {
+	font-family: 'poppins';
+	src: url('font/poppins/poppins.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*{
+	font-family: poppins;
+}
+h1, h2{
+	text-align: center;
+}
+
+main section{
+	height: auto;
+	padding: 20px;
+	border: 2px solid #000;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
+.main_grid{
+	display: flex;
+}
+
+main section:not(.main_grid section){
+	width: 80%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+main.main_grid section{
+	width: 50%;
+	height: 100%;
+	margin-right: 10px;
+}
+.book_item{
+	width : 80%;
+	height: auto;
+	border: 2px solid #000;
+	margin: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-radius: 4px;
+}
+input{
+	width: 90%;
+	height: auto;
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	display: block;
+}
+input[type="checkbox"]{
+	width:25px;
+	height:25px;
+	margin-top: 3px;
+	margin-bottom: 20px;
+}
+button{
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	box-shadow: none;
+	border: none;
+	font-size: 17px;
+	background: darkcyan;
+	color: #fff;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-bottom: 20px!important;
+
+}
+.book_item button{
+	width: auto;
+}
+
+
+section:not(.main_grid section):hover{
+	transition: .5s;
+	z-index: 99;
+	background: #fff;
+	transform: scale(1.2);
+	box-shadow: 2px 2px 2px #ccc;
+}
+
+.alert{
+	width: 40%;
+	height: auto;
+	padding: 20px;
+	background: limegreen;
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	color: #fff;
+	z-index: 999;
+	display: none;
+
+}
+.alert .content{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.alert button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30px;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align: center;
+}
+@media( max-width: 700px){
+	.main_grid{
+		flex-direction: column;
+	}
+	section{
+		width: 100% !important;
+	}
+	section:hover{
+		transform: scale(1)!important;
+	}
+}
+
+.load_screen{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	z-index: 998;
+}
+.load_screen .content{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+}
+.load_screen img{
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	border-radius: 50%;
+	animation: animasiLoad;
+	animation-duration: .7s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	animation-timing-function: ease-in;
+}
+.load_screen button{
+	width:40%;
+	display:none;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.btn_reset_app{
+	background: brown;
+}
+
+@keyframes animasiLoad{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 0;
+	}
+}

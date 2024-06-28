@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Bookshelf Apps</title>
+
+  <script defer src="main.js"></script>
+  <style type="text/css">
+  button[type=submit]{
+    width: : 100%!important;
+  }
+</style>
+
+</head>
+<body>
+  <header>
+    <h1>Bookshelf Apps</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Tambah Buku Baru</h2>
+      <form id="bookForm" data-testid="bookForm">
+        <div>
+          <label for="bookFormTitle">Judul</label>
+          <input value="Senja" id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+        </div>
+        <div>
+          <label for="bookFormAuthor">Penulis</label>
+          <input value="Irshandy" id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+        </div>
+        <div>
+          <label for="bookFormYear">Tahun</label>
+          <input  id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+        </div>
+        <div style="display: flex;margin-top: 20px">
+          <input value="nilai sementara"
+          id="bookFormIsComplete"
+          type="checkbox"
+          data-testid="bookFormIsCompleteCheckbox"
+          />
+          <label for="bookFormIsComplete">Ceklis jika buku selesai dibaca</label>
+        </div>
+        <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Cari Buku</h2>
+      <div id="searchBook" data-testid="searchBookForm">
+        <label for="searchBookTitle">Judul</label>
+        <input class="search" id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" placeholder="Mau cari buku apa ?" />
+        <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
+          Cari
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <main class="main_grid">
+    <section>
+      <h2>Belum selesai dibaca</h2>
+
+      <div class="section_data" id="incompleteBookList" data-testid="incompleteBookList">
+        <!-- 
+          Ini adalah struktur HTML untuk masing-masing buku.
+          Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+        -->
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Selesai dibaca</h2>
+
+      <div class="section_data" id="completeBookList" data-testid="completeBookList">
+        <!-- 
+          Ini adalah struktur HTML untuk masing-masing buku.
+          Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+        -->
+
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Melayang -->
+  <div class="alert">
+    <div style="content">
+      <button>
+        X
+      </button>
+      <!-- Text di replace dari js -->
+      <p>  TEXT  </p>
+    </div>
+  </div>
+
+  <!-- Melayang -->
+  <div class="load_screen">
+    <div class="content">
+      <img src="user.jpg">
+      <h1> Bookshelf Apps </h1>
+      <div>
+        <a target="_blank" href="https://linkedin.com/in/irshandy"> Visit My Linkedin </a> 
+        <span> | </span>
+        <a target="_blank" href="https://instagram.com/irsjrhr"> Visit My Instagram - @irsjrhr </a> 
+
+      </div>
+      <div style="display:flex;justify-content: center;">
+        <button class="btn_start_app">
+          Mulai
+        </button>
+        <button class="btn_reset_app">
+          Reset Data Aplikasi
+        </button>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+</body>
+
+</html>
