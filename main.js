@@ -35,7 +35,7 @@ function addBookToLocalStorage(id, title, author, year, isComplete) {
 		id: id,
 		title: title,
 		author: author,
-		year: year,
+		year: parseInt(year),
 		isComplete: isComplete
 	};
 
